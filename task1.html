@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>One Piece | Grand Line</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0b132b;
+      color: #f1f5f9;
+    }
+
+    header {
+      background: #1c2541;
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      color: #facc15;
+      font-size: 26px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #facc15;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(to right, #0b132b, #1c2541);
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 52px;
+      margin-bottom: 20px;
+      color: #facc15;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+      color: #cbd5f5;
+    }
+
+    .hero a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 35px;
+      background: #facc15;
+      color: #020617;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 80px 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h3 {
+      font-size: 34px;
+      color: #facc15;
+    }
+
+    .section-title p {
+      color: #cbd5f5;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.9;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .crew {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .card {
+      background: #1c2541;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #facc15;
+      margin-bottom: 15px;
+    }
+
+    .card h4 {
+      color: #facc15;
+      margin-bottom: 8px;
+    }
+
+    .card em {
+      color: #cbd5f5;
+      font-size: 14px;
+    }
+
+    .arcs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .arc {
+      background: #1c2541;
+      padding: 25px;
+      border-left: 5px solid #facc15;
+      border-radius: 15px;
+    }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 30px;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 900px) {
+      header { padding: 15px 30px; }
+      section { padding: 60px 30px; }
+      .crew, .arcs { grid-template-columns: 1fr; }
+      .hero h2 { font-size: 38px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ONE PIECE</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#crew">Crew</a>
+    <a href="#arcs">Arcs</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h2>The Great Pirate Era</h2>
+    <p>Follow Monkey D. Luffy and the Straw Hat Pirates as they sail across the Grand Line in search of the legendary treasure — ONE PIECE.</p>
+    <a href="#crew">Meet the Crew</a>
+  </div>
+</div>
+
+<section id="about">
+  <div class="section-title">
+    <h3>About One Piece</h3>
+    <p>The journey of freedom and dreams</p>
+  </div>
+  <div class="about">
+    One Piece is a legendary anime and manga created by Eiichiro Oda. It tells the story of Monkey D. Luffy, a young pirate with the power of the Gum-Gum Devil Fruit, whose dream is to become the Pirate King.
+  </div>
+</section>
+
+<section id="crew">
+  <div class="section-title">
+    <h3>Straw Hat Pirates</h3>
+    <p>Main crew members</p>
+  </div>
+
+  <div class="crew">
+    <div class="card">
+      <img src="images/luffybounty.jpeg">
+      <h4>Monkey D. Luffy</h4>
+      <p>Captain who fights for freedom and adventure.</p>
+      <p><em>“I’m gonna be King of the Pirates!”</em></p>
+    </div>
+
+    <div class="card">
+      <img src="images/zorobounty.jpeg">
+      <h4>Roronoa Zoro</h4>
+      <p>Fearless swordsman aiming to be the strongest.</p>
+      <p><em>“Scars on the back are a swordsman’s shame.”</em></p>
+    </div>
+
+    <div class="card">
+      <img src="images/namibounty.jpeg">
+      <h4>Nami</h4>
+      <p>Navigator with unmatched weather skills.</p>
+      <p><em>“Money makes the world go round.”</em></p>
+    </div>
+
+    <div class="card">
+      <img src="images/usoppbounty.jpeg">
+      <h4>Usopp</h4>
+      <p>Sniper who dreams of being a brave warrior.</p>
+      <p><em>“I’m not running away anymore!”</em></p>
+    </div>
+
+    <div class="card">
+      <img src="images/sanjibounty.jpeg">
+      <h4>Sanji</h4>
+      <p>Cook who fights with deadly kicks.</p>
+      <p><em>“Cooking is a gift from the gods.”</em></p>
+    </div>
+
+    <div class="card">
+      <img src="images/chopperbounty.jpeg">
+      <h4>Tony Tony Chopper</h4>
+      <p>Doctor and lovable reindeer of the crew.</p>
+      <p><em>“I’m not a monster, I’m a doctor!”</em></p>
+    </div>
+  </div>
+</section>
+
+<section id="arcs">
+  <div class="section-title">
+    <h3>Popular Arcs</h3>
+    <p>Legendary adventures</p>
+  </div>
+  <div class="arcs">
+    <div class="arc"><h4>East Blue</h4><p>The beginning of Luffy's journey.</p></div>
+    <div class="arc"><h4>Alabasta</h4><p>War against Crocodile.</p></div>
+    <div class="arc"><h4>Enies Lobby</h4><p>War on the World Government.</p></div>
+    <div class="arc"><h4>Wano Country</h4><p>Battle against Kaido and Big Mom.</p></div>
+  </div>
+</section>
+
+<footer>
+  <p>© One Piece Fan Website | Not Official</p>
+</footer>
+
+</body>
+</html>
