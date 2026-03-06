@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Git Version Control Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #1e3c72;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #2a5298;
+            outline: none;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            background: #2a5298;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1e3c72;
+            transform: scale(1.05);
+        }
+
+        .output {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+            min-height: 24px;
+        }
+
+        .dark {
+            background: linear-gradient(135deg, #000000, #434343);
+        }
+
+        .dark .container {
+            background: #222;
+            color: white;
+        }
+
+        .dark input {
+            background: #333;
+            color: white;
+            border-color: #555;
+        }
+
+        .dark button {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Git Demo Webpage</h1>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button onclick="greetUser()">Greet</button>
+        <button onclick="changeTheme()">Toggle Theme</button>
+        <button onclick="clearText()">Clear</button>
+        <div class="output" id="message"></div>
+    </div>
+
+    <script>
+        function greetUser() {
+            const name = document.getElementById("username").value;
+            const message = document.getElementById("message");
+            if(name.trim() === "") {
+                message.innerText = "Please enter your name.";
+            } else {
+                message.innerText = "Hello " + name + "! Welcome to Git Version Control Demo.";
+            }
+        }
+
+        function clearText() {
+            document.getElementById("username").value = "";
+            document.getElementById("message").innerText = "";
+        }
+
+        function changeTheme() {
+            document.body.classList.toggle("dark");
+        }
+
+        document.getElementById("username").addEventListener("keyup", function(event) {
+            if(event.key === "Enter") {
+                greetUser();
+            }
+        });
+    </script>
+</body>
+</html>

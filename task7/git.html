@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-color: #f8fafc;
+            --accent: #3b82f6;
+            --accent-hover: #60a5fa;
+            --secondary: #ec4899;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bg-color), #1e293b);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            transition: background 0.5s ease;
+        }
+
+        body.light-mode {
+            --bg-color: #f1f5f9;
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --text-color: #0f172a;
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            transform: translateY(0);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2em;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.1s ease;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        button:hover {
+            background: var(--accent-hover);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        #interaction-result {
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: 500;
+            min-height: 24px;
+        }
+
+        .interactive-zone {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            cursor: crosshair;
+            transition: border-color 0.3s ease;
+        }
+
+        .light-mode .interactive-zone {
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .interactive-zone:hover {
+            border-color: var(--secondary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Interactive Webpage</h1>
+        <p>This is a stylish webpage demonstrating HTML, CSS, and Event Handling in JavaScript.</p>
+
+        <button id="theme-toggle">Toggle Theme</button>
+
+        <div id="interaction-result">Click the button to change theme!</div>
+
+        <div class="interactive-zone" id="hover-zone">
+            Hover over me to see mouse events!
+        </div>
+    </div>
+
+    <script>
+        // Event Handling: Theme Toggle (Click Event)
+        const themeBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const resultText = document.getElementById('interaction-result');
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            if (body.classList.contains('light-mode')) {
+                resultText.textContent = "Switched to Light Mode! ☀️";
+                themeBtn.textContent = "Switch to Dark Mode";
+            } else {
+                resultText.textContent = "Switched to Dark Mode! 🌙";
+                themeBtn.textContent = "Switch to Light Mode";
+            }
+        });
+
+        // Event Handling: Mouse Area (MouseEnter, MouseLeave, MouseMove Events)
+        const hoverZone = document.getElementById('hover-zone');
+
+        hoverZone.addEventListener('mouseenter', () => {
+            hoverZone.style.backgroundColor = 'rgba(236, 72, 153, 0.1)';
+            hoverZone.textContent = "Whoa, that tickles! 😆";
+        });
+
+        hoverZone.addEventListener('mouseleave', () => {
+            hoverZone.style.backgroundColor = 'transparent';
+            hoverZone.textContent = "Hover over me to see mouse events!";
+        });
+
+        hoverZone.addEventListener('mousemove', (e) => {
+            // Calculate relative coordinates
+            const rect = hoverZone.getBoundingClientRect();
+            const x = Math.round(e.clientX - rect.left);
+            const y = Math.round(e.clientY - rect.top);
+            hoverZone.textContent = `Mouse at X: ${x}, Y: ${y} 🎯`;
+        });
+    </script>
+</body>
+
+</html>

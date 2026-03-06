@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link rel="stylesheet" href="Task06.css">
+        <title>Registration</title>
+
+       <script src="task6.js">
+       </script>
+    </head>
+    <body>
+        <div class="Ex-box" >
+            <h2> Register-!!!</h2>
+            <hr>
+            <div class="ip-box">
+                <div class="input-group">
+                <p>Enter your Name</p>
+                <input type="text" id="name" placeholder="Name" required>
+                <div id="name-error"></div>
+                </div>
+                <div class="input-group">
+                <p>Enter your Date of Birth </p>
+                <input type="date"  id="DOB"  placeholder="DD-MM-YYYY" required>
+                <div id="dob-error"></div>
+                </div>
+                <div class="input-group">
+                <p>Enter your Phone Number</p>
+                <input type="tel" id="phno" placeholder="1234567890" required>
+                <div id="ph-error"></div>
+                </div>
+            
+            
+                <div class="ip-box2">
+                <div class="input-group2">
+                    <p>Enter your Age</p>
+                     <div class="age-group" id="Age">
+                    <label><input type="radio" name="Age"  onclick="Select(this)"> below 18</label>
+                    <label><input type="radio" name="Age"  onclick="Select(this)"> Above 18</label>
+                    </div>
+                    <div id="rad-error"></div>
+                </div>
+                <script>
+                    function Select(radio) {
+                    const selecs = document.getElementsByName('Age');
+                    selecs.forEach((item) => {
+                    if (item !== radio) item.checked = false;
+                    });
+
+                }
+                </script>
+                <div class="input-group">
+                    <p>Enter your Email-id</p>
+                    <input type="email" id="mail" placeholder="example@gmail.com" required>
+                     <div id="gm-error"></div>
+                </div>
+               
+                
+                <div class="input-group">
+                    <p>Enter your address</p>
+                    <input type="text" id="address" placeholder="Address" required>
+                    <div id="add-error"></div>
+                </div>
+                </div>
+
+                <div class="ip-box3">
+                    <div class="input-group3">  
+                    <p>Enter your Aadhaar Number</p>
+                    <input type="text" id="aadhaar" placeholder="xxxx-xxxx-xxxx">
+                    <div id="id-error"></div>
+                </div>
+                <div class="input-group3">                
+                    <p>Enter your Marrital Status</p>
+                    <div class="Gen-group" id="marry">
+                    <label><input type="checkbox" name="option" onclick="selectOnlyOne(this)"> Single</label>
+                    <label><input type="checkbox"  name="option" onclick="selectOnlyOne(this)"> Married</label>
+                    </div>
+                </div>
+
+                <script>
+                    function selectOnlyOne(checkbox) {
+                    const checkboxes = document.getElementsByName('option');
+                    checkboxes.forEach((item) => {
+                        if (item !== checkbox) item.checked = false;
+                    });
+                    }
+                </script>
+                    <div class="input-group3">
+                    <p>Enroll your Gender</p>
+                    <input type="text" id="genderInput" placeholder="Gender" oninput="See(this)">
+                    <div id="gen-err"></div>
+                    </div>
+                    <div class="btr">
+                    <button type="submit" id="sub" onclick="cle" >Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </body>
+</html>
