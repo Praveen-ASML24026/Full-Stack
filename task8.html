@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Praveen | ES6 Portfolio</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    text-align:center;
+    margin-top:50px;
+    background:#f4f6f8;
+}
+
+h1{
+    color:#333;
+}
+
+button{
+    padding:12px 25px;
+    font-size:16px;
+    cursor:pointer;
+    background:#007BFF;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+#output{
+    margin-top:30px;
+    font-size:18px;
+    color:#222;
+    background:white;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Praveen - Developer Profile</h1>
+
+<p>Click the button to load my profile using ES6 JavaScript</p>
+
+<button onclick="loadUser()">Load My Profile</button>
+
+<div id="output"></div>
+
+<script>
+
+const output = document.getElementById("output");
+
+
+
+const fetchUser = () => {
+
+    return new Promise((resolve) => {
+
+        setTimeout(() => {
+
+            resolve({
+                name: "Praveen",
+                age: 20,
+                city: "Chennai",
+                role: "BSc AI & ML Student",
+                skills: ["Java", "Python", "Web Development", "Machine Learning"]
+            });
+
+        },2000);
+
+    });
+
+};
+
+
+
+const createProfile = ({name, age, city, role, skills}) => {
+
+    return `
+        <h2>${name}</h2>
+        <p><b>Role:</b> ${role}</p>
+        <p><b>Age:</b> ${age}</p>
+        <p><b>Location:</b> ${city}</p>
+
+        <h3>Skills</h3>
+        <p>${skills.join(", ")}</p>
+
+        <p>🚀 Passionate about programming, backend development, and AI/ML.</p>
+    `;
+
+};
+
+
+
+async function loadUser(){
+
+    const user = await fetchUser();
+
+    const profile = createProfile(user);
+
+
+    output.innerHTML = `${profile}`;
+
+}
+
+</script>
+
+</body>
+</html>
