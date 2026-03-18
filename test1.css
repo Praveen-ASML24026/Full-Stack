@@ -1,0 +1,25 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #febfbf;
+
+}
+.container{
+    text-align: center;
+    padding: 50px;
+}
+
+button{
+    background-color: blue;
+    color: aliceblue;
+    padding: 10px 20px;
+}
+
+button:hover{
+    background-color: darkblue;
+}
+
+@media(max-width:500px){
+    body{
+        background-color: lightgray;
+    }
+}
