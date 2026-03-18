@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage - Bootstrap 5</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        .hero-section {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">PulseTech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+
+                        <a class="btn btn-primary text-white px-4 rounded-pill shadow-sm" href="#"
+                            data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="hero-section text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
+                    <span class="badge bg-primary rounded-pill mb-3 px-3 py-2">New Release v2.0</span>
+                    <h1 class="display-4 fw-bold text-dark lh-sm">Build Responsive <span class="text-primary">Web
+                            Apps</span> Faster</h1>
+                    <p class="lead text-secondary my-4">Utilize the power of Bootstrap 5 grid systems, components, and
+                        utilities to create stunning, mobile-first websites quickly and efficiently.</p>
+                    <div class="d-grid d-md-flex justify-content-center justify-content-lg-start gap-3">
+                        <button class="btn btn-primary btn-lg rounded-pill px-5 shadow" data-bs-toggle="modal"
+                            data-bs-target="#contactModal">Get Started</button>
+                        <button class="btn btn-outline-secondary btn-lg rounded-pill px-4">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <div class="position-absolute top-0 end-0 bg-primary rounded-circle"
+                            style="width: 100px; height: 100px; z-index: -1; transform: translate(20%, -20%); opacity: 0.2;">
+                        </div>
+                        <div class="position-absolute bottom-0 start-0 bg-warning rounded-circle"
+                            style="width: 150px; height: 150px; z-index: -1; transform: translate(-20%, 20%); opacity: 0.2;">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Hero Image" class="img-fluid rounded-4 shadow-lg border border-white border-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase tracking-wide">Features</h6>
+                <h2 class="fw-bold display-6">Our Services</h2>
+                <div class="mx-auto bg-primary mt-3" style="width: 60px; height: 4px; border-radius: 2px;"></div>
+            </div>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm custom-card transition-shadow">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                                style="width: 70px; height: 70px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-laptop" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+                                </svg>
+                            </div>
+                            <h5 class="card-title fw-bold">Web Development</h5>
+                            <p class="card-text text-secondary mb-4">We build responsive, fast, and modern web
+                                applications tailored to your business needs ensuring optimal performance.</p>
+                            <a href="#" class="text-primary text-decoration-none fw-semibold">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow custom-card position-relative overflow-hidden">
+                        <div class="position-absolute top-0 start-0 w-100 bg-primary" style="height: 4px;"></div>
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-4 shadow"
+                                style="width: 70px; height: 70px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-phone" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                </svg>
+                            </div>
+                            <h5 class="card-title fw-bold">App Development</h5>
+                            <p class="card-text text-secondary mb-4">Create engaging mobile experiences with our
+                                cross-platform app development services for iOS and Android.</p>
+                            <a href="#" class="text-primary text-decoration-none fw-semibold">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm custom-card transition-shadow">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-danger bg-opacity-10 text-danger rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                                style="width: 70px; height: 70px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    class="bi bi-palette" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                                    <path
+                                        d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8m-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.15 1.043.292 1.128.475.054.118.068.327-.06.7Z" />
+                                </svg>
+                            </div>
+                            <h5 class="card-title fw-bold">UI/UX Design</h5>
+                            <p class="card-text text-secondary mb-4">Beautiful and intuitive designs that provide the
+                                best user experience and accessibility for your customers.</p>
+                            <a href="#" class="text-danger text-decoration-none fw-semibold">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-light border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 pt-1">
+                    <div class="text-center mb-4">
+                        <h4 class="modal-title fw-bold" id="contactModalLabel">Get In Touch</h4>
+                        <p class="text-muted small">We'd love to hear from you. Fill out the form below.</p>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-semibold small text-secondary">Full Name</label>
+                            <input type="text" class="form-control bg-light border-0" id="name" placeholder="John Doe">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold small text-secondary">Email Address</label>
+                            <input type="email" class="form-control bg-light border-0" id="email"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label fw-semibold small text-secondary">Message</label>
+                            <textarea class="form-control bg-light border-0" id="message" rows="4"
+                                placeholder="How can we help you?"></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-primary btn-lg rounded-pill shadow-sm">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <div class="mb-4">
+                <a href="#" class="text-white mx-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg></a>
+                <a href="#" class="text-white mx-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                    </svg></a>
+            </div>
+            <p class="mb-0 text-secondary">&copy; 2026 PulseTech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.querySelectorAll('.custom-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.remove('shadow-sm');
+                card.classList.add('shadow');
+                card.style.transform = 'translateY(-5px)';
+                card.style.transition = 'all 0.3s ease';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('shadow');
+                card.classList.add('shadow-sm');
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+
+</html>
