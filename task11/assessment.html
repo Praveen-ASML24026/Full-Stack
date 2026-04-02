@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assesment</title>
+    <link rel="stylesheet" href="assessment.css">
+    
+</head>
+<body>
+    <div class="box">
+        <h3>Change Bg Color</h3>
+        <button onclick="changebgColor()">changebgColor</button>
+    </div>
+
+    <div class="box">
+        <h3>live Text Viwer</h3>
+        <input type="text" id="ipbox" placeholder="type here">
+        <p id="op"></p>
+    </div>
+
+    <div class="box">
+        <h3>password Toggle</h3>
+        <input type="password" required id="password">
+        <button onclick="togglepsw()">Show|hide</button>
+    </div>
+
+    <div class="box">
+        <h3>Img Slider</h3>
+     <img src="images/luffybounty.jpeg" id="Slider">
+        <button onclick="next()">Next</button>
+        <button onclick="prev()">Prev</button>
+    </div>
+
+    <div class="box">
+        <h3>Counter</h3>
+        <h2 id="count">0</h2>
+        <button onclick="increment()">++</button>
+        <button onclick="decrement()">--</button>
+    </div>
+    <script src="assessment.js"></script>
+</body>
+</html>
